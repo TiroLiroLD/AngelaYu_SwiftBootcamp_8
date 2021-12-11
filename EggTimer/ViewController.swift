@@ -14,13 +14,14 @@ class ViewController: UIViewController {
     let mediumTime = 7
     let hardTime = 12
 
+    @IBOutlet weak var eggTimerLabel: UILabel!
     @IBAction func onEggSelected(_ sender: UIButton) {
         if sender.currentTitle == "Soft" {
-            print(softTime)
+            contagem_regressiva(minutos: softTime)
         } else if sender.currentTitle == "Medium" {
-            print(mediumTime)
+            contagem_regressiva(minutos: mediumTime)
         } else if sender.currentTitle == "Hard" {
-            print(hardTime)
+            contagem_regressiva(minutos: hardTime)
         }
         /*
         switch sender.currentTitle{
@@ -33,6 +34,16 @@ class ViewController: UIViewController {
         default: break
         }
         */
+    }
+    
+    func contagem_regressiva(minutos: Int){
+        var count = minutos * 60
+        while count != (0){
+            print(count)
+            eggTimerLabel.titleLabel = String(count)
+            usleep(1000000)
+            count -= 1
+        }
     }
     
 }

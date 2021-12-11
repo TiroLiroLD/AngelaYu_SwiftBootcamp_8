@@ -134,6 +134,11 @@
                             <constraint firstAttribute="trailingMargin" secondItem="wI6-ag-afn" secondAttribute="trailing" id="dky-ZA-Z3J"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="eggTimerLabel" destination="XLm-5r-pSP" id="Pqz-JL-F4Z"/>
+                        <outlet property="eggTimerLaber" destination="XLm-5r-pSP" id="huY-8c-jYB"/>
+                        <outlet property="title" destination="XLm-5r-pSP" id="ktR-2F-qM2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
